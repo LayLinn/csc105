@@ -1,0 +1,387 @@
+/* Define custom fonts */
+
+@font-face {
+    font-family: 'BallparkWeiner';
+    src: url('fonts/ballpark.eot');
+    src: url('fonts/ballpark.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ballpark.woff') format('woff'),
+        url('fonts/ballpark.ttf') format('truetype'),
+        url('fonts/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dayrom';
+    src: url('fonts/dayrom.eot');
+    src: url('fonts/dayrom.eot?#iefix') format('embedded-opentype'),
+        url('fonts/dayrom.woff') format('woff'),
+        url('fonts/dayrom.ttf') format('truetype'),
+        url('fonts/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC');
+/* font-family: 'Sarabun', sans-serif; */
+
+/* Main elements of the page */
+
+body {
+    /* background: url('images/yellow_background.png'); */
+    font-family: 'Sarabun', sans-serif;
+    background-color: #FAF9E9;
+    margin: auto 0;
+}
+
+section h1,
+footer h1,
+nav a {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Header */
+
+header {
+    /* background: url('images/line.png') repeat-x bottom; */
+
+    background-color: rgb(240, 237, 217);
+}
+
+.header-h2 {
+    /* font-family: 'Sarabun', sans-serif; */
+    margin: 30px 20px 0 0;
+    font-weight: bolder;
+    font-size: 1.75em;
+}
+
+#main_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    justify-self: flex-start;
+}
+
+#logo,
+header h1 {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+header h2 {
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+.nav-base {
+    background-color: rgb(24, 24, 24);
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    justify-content: flex-end;
+    z-index: 1;
+    background-color: rgba(24, 24, 24, 0.5);
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    font-size: 1.3em;
+    color: white;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Banner */
+
+#banner_image {
+    display: flex;
+    margin-top: px;
+    height: 300px;
+    border-radius: 5px;
+    background: url('images/sanfrancisco.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19;
+    margin-bottom: 25px;
+}
+
+#banner_description {
+    width: 100%;
+    height: 285px;
+    /* height: 100%; */
+    position: relative;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    padding-top: 15px;
+    padding-left: 4px;
+    /* background-color: rgb(24,24,24); Old browsers will read this */
+    /* background-color: rgba(24,24,24,0.8); New browsers will read this */
+    color: transparent;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 1s, color 1s;
+    align-self: center;
+}
+
+#banner_description:hover {
+    background-color: rgb(24, 24, 24);
+    /* Old browsers will read this */
+    background-color: rgba(24, 24, 24, 0.8);
+    color: white;
+}
+
+#banner_description:hover .red_button {
+    opacity: 1;
+}
+
+.red_button {
+    display: inline-block;
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/red_background.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 1s linear 0.75s;
+}
+
+.red_button img {
+    border: 0;
+}
+
+/* Body */
+section {
+    display: flex;
+    /* justify-content: center; */
+    background-color: white;
+    /* border: 1px solid transparent; */
+    height: 70vh;
+}
+
+
+article,
+aside {
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    overflow: scroll;
+}
+
+article {
+    overflow: auto;
+    width: 75vw;
+    margin-right: 1vw;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.cat_icon {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.fa {
+    padding: 10%;
+    margin: 2%;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-vimeo {
+    background: #45bbff;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+
+
+article p {
+    font-size: 0.8em;
+}
+
+aside {
+    overflow: hidden;
+    background-color: #1f1f24;
+    /* box-shadow: 0px 2px 5px #1c1a19; */
+    margin-left: 0vw;
+    padding-right: 50px;
+    width: 25vw;
+    border-radius: 2px;
+    padding: 10px;
+    color: white;
+    font-size: 1em;
+}
+
+aside h1 {
+    text-align: center;
+}
+
+#social-media {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#social-media img {
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    /* width: 3vw; */
+    /* height: 4vh; */
+}
+
+#social-media a {
+    text-decoration: none;
+}
+
+#arrow {
+    position: absolute;
+    top: 100px;
+    left: -12px;
+}
+
+#zozor_picture {
+    text-align: center;
+}
+
+#zozor_picture img {
+    border: 1px solid #181818;
+}
+
+aside img {
+    margin-right: 0.5vw;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: url('images/top.png') no-repeat top center, url('images/line.png') repeat-x top, url('images/shadow.png') repeat-x top;
+    padding-top: 25px;
+}
+
+footer p,
+footer ul {
+    font-size: 0.8em;
+}
+
+footer h1 {
+    font-size: 1.1em;
+}
+
+#tweet,
+#my_pictures,
+#my_friends {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#tweet {
+    width: 28%;
+}
+
+#my_pictures {
+    width: 35%;
+}
+
+#my_friends {
+    width: 31%;
+}
+
+#my_pictures img {
+    border: 1px solid #181818;
+    margin-right: 2px;
+    transition: transform 0.5s;
+}
+
+#my_pictures img:hover {
+    transform: scale(1.25);
+}
+
+#my_friends ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    width: 48%;
+    list-style-image: url('images/external_link.png');
+    padding-left: 2px;
+}
+
+#my_friends a {
+    text-decoration: none;
+    color: #760001;
+}
+
+#return {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 0 1rem 90vw;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    /* text-align: right; */
+}
+
+#return a {
+    text-decoration: none;
+    color: #1f1f24;
+}
