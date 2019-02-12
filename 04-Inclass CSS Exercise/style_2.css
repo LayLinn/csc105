@@ -112,8 +112,28 @@ a:hover {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 767px){
-    body{
-        background-color: rgb(220, 238, 238);
+@media only screen and (max-width: 767px) {
+    body {
+        margin: 0;
+    }
+    
+    #menubar{
+        float: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menuitem{
+        width: 95vw;
+        margin: 0;
+        text-align: center;
+    }
+
+    #images{
+        grid-template-columns: 1fr;
+    }
+
+    #images a img{
+        width: 95vw;
     }
 }

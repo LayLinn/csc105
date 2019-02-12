@@ -90,5 +90,18 @@ a:hover {
 @media only screen and (max-width: 767px) {
     body {
         background-color: rgb(220, 238, 238);
+        margin: 0;
+    }
+
+    .menuitem{
+        width: 47vw;
+    }
+
+    #images{
+        grid-template-columns: 1fr;
+    }
+
+    #images a img{
+        width: 95vw;
     }
 }

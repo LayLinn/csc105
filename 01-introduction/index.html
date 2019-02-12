@@ -4,6 +4,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width">
     <title>Introduction</title>
     <style>
         body {
@@ -11,14 +12,14 @@
             color: white;
             font-family: sans-serif;
             font-size: 16px;
-            margin-top: 4em;
+            margin-top: 4rem;
         }
 
         main {
-            margin: 5em auto;
+            margin: 5rem auto;
             background-color: rgba(0, 0, 0, 0.952);
-            height: 15em;
-            width: 20em;
+            height: 15rem;
+            width: 20rem;
             transform: rotate(45deg);
         }
 
@@ -43,8 +44,8 @@
 
         #cloud {
             display: block;
-            margin: 6em auto 0 auto;
-            width: 20em;
+            margin: 6rem auto 0 auto;
+            width: 20rem;
         }
 
         #return {
@@ -60,6 +61,16 @@
         #return a {
             text-decoration: none;
             color: white;
+        }
+
+        @media only screen and (max-width: 767px) {
+            main{
+                margin: 0 auto;
+            }
+
+            #return{
+                margin-left: 85vw;
+            }
         }
     </style>
 </head>
@@ -80,8 +91,8 @@
             </div>
         </div>
     </main>
-    <div id="return"><a href="../index.html">&lt;Return</a></div>
     <img src="cloud.png" id="cloud" alt="cloudy storm">
+    <div id="return"><a href="../index.html">&lt;Return</a></div>
 </body>
 
 </html>
