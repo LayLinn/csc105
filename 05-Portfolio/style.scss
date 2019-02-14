@@ -1,0 +1,218 @@
+//placeholders
+%standard-padding {
+    padding: 3rem 12rem;
+}
+
+%standard-padding-mobile {
+    padding: 2rem 1rem;
+}
+
+//font-face
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+// HTML, MAIN
+body,
+html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+//Navigation
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+//Boxes, Section containers
+.box {
+    width: 100vw;
+}
+
+.box-1 {
+    height: 120vh;
+    background-image: url("images/welcome_small.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.box-2 {
+    height: 40vh;
+    background-color: rgb(241, 241, 235);
+    @extend %standard-padding;
+}
+
+.box-3 {
+    min-height: 60vh;
+    max-height: auto;
+    background-color: 238, 241, 235;
+    @extend %standard-padding;
+}
+
+.box-4 {
+    height: 100vh;
+    background-color: rgb(60, 60, 59);
+    color: white;
+    @extend %standard-padding;
+}
+
+//Sections
+//First
+#welcome-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+}
+
+#welcome-text p {
+    padding: 1rem;
+    border: 0.05rem solid black;
+}
+
+//Second
+.heading-normal {
+        display: inline-block;
+    }
+
+.heading-small { //hide short text version if viewport is big enough
+        display: none;
+    }
+
+.heading-second span {
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+.second-info {
+    display: flex;
+    margin: 2.5rem 10rem 2.5rem 10rem;
+}
+
+//Third
+.heading-third span {
+    font-size: 3rem;
+    opacity: 0.5;
+}
+
+.third-info {
+    display: grid;
+    padding: 0 3rem;
+    grid-template-columns: 4fr 2fr;
+    grid-column-gap: 10rem;
+}
+
+.image-frame-macbook {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-macbook {
+    display: flex; //to center the text inside vertically and horizontally
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,.2);
+    color: white;
+    font-family: Helvetica, sans-serif;
+    transition: opacity 1s;
+}
+
+.macbook {
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.image-frame-macbook:hover .overlay-macbook {
+    opacity: 1;
+}
+
+//Fourth
+//Shared Section Elements
+.heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2rem;
+}
+
+//keyframes
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//Media query
+@media only screen and (max-width: 1024px) {
+    //First section
+    .box-1 {
+        background-size: cover;
+        color: white;
+    }
+    #welcome-text p {
+        border: none;
+        padding: 0;
+    } //Second Section
+    .box-2 {
+        padding: 2rem 1.5rem;
+    }
+    #heading-second {
+        text-align: center;
+    }
+    .second-info {
+        margin: 1rem 1.5rem;
+    } //Third Section
+    .box-3 {
+        padding: 2rem 1rem;
+    }
+    .third-info {
+        grid-template-columns: 1fr;
+        margin: 1rem 1.5rem;
+        padding: 0 2rem;
+    } //Fourth Section
+    .box-4 {
+        padding: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    //body
+    html,
+    body {
+        font-size: 13px;
+    }
+
+    heading {
+        font-size: 3rem;
+    }
+
+    .heading-normal { //hide normal heading if viewport is small enough
+        display: none; 
+    }
+
+    .heading-small {
+        display: inline-block;
+    }
+
+    }
