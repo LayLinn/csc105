@@ -40,6 +40,8 @@ main {
 
 .img-frame {
     position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .img-frame img {
@@ -375,5 +377,11 @@ main {
 
     .img-text{
         font-size: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1919px){
+    html,body{
+        font-size: 18px;
     }
 }
