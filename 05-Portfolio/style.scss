@@ -83,6 +83,7 @@ main {
     height: 120vh;
     background-image: url("images/welcome_small.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -105,6 +106,17 @@ main {
     background-color: rgb(60, 60, 59);
     color: white;
     padding: 3rem 1rem 3rem 2rem;
+}
+
+.box-5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 100vh;
+    padding-top: 10vh;
+    background-image: url("images/wall_small.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 //Sections
@@ -165,12 +177,12 @@ main {
     padding-left: 10rem;
 }
 
-#skill{
+#skill {
     margin-top: 1rem;
     font-size: 1.2rem;
 }
 
-.progress{
+.progress {
     width: 50%;
     margin-top: 1em;
     margin-left: 20%;
@@ -225,11 +237,11 @@ main {
     @extend %img-transition;
 }
 
-.pineapple:hover{
+.pineapple:hover {
     @extend %img-hover-effect;
 }
 
-.pineapple:hover .pineapple-text{
+.pineapple:hover .pineapple-text {
     opacity: 1;
 }
 
@@ -237,15 +249,16 @@ main {
     @extend %img-transition;
 }
 
-.milk-text{
+.milk-text {
     color: rgb(105, 94, 94);
 }
 
-.milk:hover{
+.milk:hover {
     @extend %img-hover-effect;
 }
 
-.milk:hover .milk-text{ //look for class "milk-text" inside of "milk" class
+.milk:hover .milk-text {
+    //look for class "milk-text" inside of "milk" class
     opacity: 1;
 }
 
@@ -257,7 +270,7 @@ main {
     @extend %img-transition;
 }
 
-.soup-text{
+.soup-text {
     color: rgb(179, 235, 245);
 }
 
@@ -265,8 +278,40 @@ main {
     @extend %img-hover-effect;
 }
 
-.soup:hover .soup-text{
+.soup:hover .soup-text {
     opacity: 1;
+}
+
+//footer
+.heading-footer {
+    color: white;
+    width: 100%;
+}
+
+.container-link {
+    display: grid;
+    padding: 1rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.fa {
+    //link icon style
+    font-size: 10rem;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.fa-github{
+    color: black;
+    background-color: white;
+}
+
+.fa:hover{
+    text-decoration: none;
 }
 
 //keyframes
@@ -328,7 +373,7 @@ main {
         padding-left: 0; //reset padding
     }
 
-    .progress{
+    .progress {
         width: 75%;
         padding-left: 0;
     }
@@ -362,7 +407,7 @@ main {
     }
 
     //third section
-    .third-info{
+    .third-info {
         grid-row-gap: 3rem;
     }
 
@@ -375,13 +420,30 @@ main {
         padding-left: 0;
     }
 
-    .img-text{
+    .img-text {
         font-size: 4rem;
+    }
+
+    //footer
+    .container-link{
+        grid-template-columns: auto;
+        margin-bottom: 5rem; //push the contents up
+    }
+    .heading-footer{
+        font-size: 2.5rem;
+    }
+
+    .fa{
+        font-size: 6rem;
+        width: 6rem;
+        height: 6rem;
     }
 }
 
-@media only screen and (min-width: 1919px){
-    html,body{
+@media only screen and (min-width: 1919px) {
+
+    html,
+    body {
         font-size: 18px;
     }
 }
