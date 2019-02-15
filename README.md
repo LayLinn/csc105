@@ -13,3 +13,5 @@ Repo for web programming stuff for my course
 * Fix old faculty site
 * Make the pages responsive
 * Using HTML and CSS
+#### Week 5
+* Make a portfolio page using Bootstrap
