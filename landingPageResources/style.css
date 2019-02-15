@@ -10,6 +10,7 @@
 }
 
 body, html {
+  font-size: 16px;
   margin: 0;
   overflow-x: hidden;
 }
@@ -70,6 +71,11 @@ body, html {
 .card-4 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
+}
+
+.card-5 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 @-webkit-keyframes move-up {

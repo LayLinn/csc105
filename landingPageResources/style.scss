@@ -11,7 +11,7 @@
 
 //margin reset/ out of flow
 body, html {
-    font-size: 16px //default size
+    font-size: 16px; //default size
     margin: 0;
     overflow-x: hidden;
 }
@@ -71,6 +71,10 @@ body, html {
 
 .card-4 {
     animation-delay: 0.6s;
+}
+
+.card-5 {
+    animation-delay: 0.8s;
 }
 
 .card .btn {
