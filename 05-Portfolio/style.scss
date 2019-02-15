@@ -7,6 +7,15 @@
     padding: 2rem 1rem;
 }
 
+%img-transition {
+    transition: transform 0.5s ease-out;
+}
+
+%img-hover-effect {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 //font-face
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
@@ -30,7 +39,26 @@ main {
 }
 
 .img-frame {
-    // margin-bottom: 3rem !important;
+    position: relative;
+}
+
+.img-frame img {
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); //all these to center the text
+    font-size: 8rem;
+    font-weight: bold;
+    transition: opacity 0.75s ease-in-out;
+    z-index: 2; //making sure the text is above the image when the transition is triggered
+    opacity: 0; //making the text invisible initially
 }
 
 
@@ -74,7 +102,7 @@ main {
     height: auto;
     background-color: rgb(60, 60, 59);
     color: white;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 3rem 2rem;
 }
 
 //Sections
@@ -135,6 +163,17 @@ main {
     padding-left: 10rem;
 }
 
+#skill{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.progress{
+    width: 50%;
+    margin-top: 1em;
+    margin-left: 20%;
+}
+
 .image-frame-macbook {
     position: relative;
     width: 100%;
@@ -180,11 +219,53 @@ main {
     height: auto;
 }
 
-.pineapple {}
+.pineapple {
+    @extend %img-transition;
+}
 
-.milk {}
+.pineapple:hover{
+    @extend %img-hover-effect;
+}
 
-.soup {}
+.pineapple:hover .pineapple-text{
+    opacity: 1;
+}
+
+.milk {
+    @extend %img-transition;
+}
+
+.milk-text{
+    color: rgb(105, 94, 94);
+}
+
+.milk:hover{
+    @extend %img-hover-effect;
+}
+
+.milk:hover .milk-text{ //look for class "milk-text" inside of "milk" class
+    opacity: 1;
+}
+
+.milk:hover {
+    @extend %img-hover-effect;
+}
+
+.soup {
+    @extend %img-transition;
+}
+
+.soup-text{
+    color: rgb(179, 235, 245);
+}
+
+.soup:hover {
+    @extend %img-hover-effect;
+}
+
+.soup:hover .soup-text{
+    opacity: 1;
+}
 
 //keyframes
 @keyframes fade-in {
@@ -238,10 +319,16 @@ main {
         grid-template-columns: 1fr;
         margin: 1rem 1rem;
         padding: 0 1rem;
+        grid-row-gap: 2rem;
     }
 
     .third-info p {
         padding-left: 0; //reset padding
+    }
+
+    .progress{
+        width: 75%;
+        padding-left: 0;
     }
 
     .image-frame-macbook {
@@ -255,7 +342,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
     //body
     html,
@@ -273,8 +360,8 @@ main {
     }
 
     //third section
-    .heading-third {
-        font-size: 3rem;
+    .third-info{
+        grid-row-gap: 3rem;
     }
 
     .image-frame-macbook {
@@ -284,5 +371,9 @@ main {
     //fourth section
     .heading-fourth {
         padding-left: 0;
+    }
+
+    .img-text{
+        font-size: 4rem;
     }
 }

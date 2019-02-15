@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
@@ -19,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand m-2" href="#">My portfolio</a>
+        <a class="navbar-brand m-2" href="../index.html">My portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,11 +51,8 @@
             <div class="second-info">
                 <p>
                     This is a portfolio for my course, CSC105 Web
-                    Programming. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Vel placeat tenetur id consectetur
-                    corporis alias quisquam dignissimos ratione expedita.
-                    Magni fugit distinctio similique dolorum, aspernatur
-                    commodi veritatis rerum ipsa quo.
+                    Programming. This is an assignment for Week 5 of the course, this is where I basically experiment
+                    stuff on the page's appearance, and using Bootstrap to aid in some aspects.
                 </p>
             </div>
         </section>
@@ -69,15 +60,31 @@
             <p class="heading heading-third">Who<span> am I?</span></p>
             </div>
             <div class="third-info">
-                <p>
-                    My name is Natnarong Trewittayatorn, also known as Boss
-                    or Clay, currently a CS student at King Mongkut's
-                    University of Technology Thonburi. I like sweet drinks,
-                    cozy weather, music. I have interest in Frontend
-                    Development, Backend Development, and Web Design. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Animi aliquam ipsa facilis voluptates illo incidunt, repellendus quam laudantium
-                    quidem dicta suscipit, maiores ipsum harum, necessitatibus voluptate! Asperiores ad et sunt!
-                </p>
+                <div class="third-info-text">
+                    <p>
+                        My name is Natnarong Trewittayatorn, also known as Boss
+                        or Clay, currently a CS student at King Mongkut's
+                        University of Technology Thonburi. I like sweet drinks,
+                        cozy weather, music. I have interest in Frontend
+                        Development, Backend Development, and Web Design.
+                    </p>
+                    <p id="skill">Skills</p>
+                    <p>English</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%; background-color: green"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p>Java</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 45%;background-color: rgb(255, 217, 0);" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100" ></div>
+                    </div>
+                    <p>CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar progress-bar-animated" style="width: 55%; " aria-valuenow="55"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
                 <div class="image-frame-macbook">
                     <img src="images/macbook_pro_small.jpg" class="macbook" />
                     <div class="image-overlay overlay-macbook"><span>a Macbook Pro..</span></div>
@@ -86,12 +93,24 @@
         <section class="box box-4" id="section-fourth">
             <p class="heading heading-fourth">Showcase</p>
             <div class="container-showcase">
-                <div class="image-frame"><img src="images/pineapple_cropped.jpg" class="image-showcased img-fluid pineapple"></div>
-                <div class="image-frame"><img src="images/maarten-deckers-227224-unsplash.jpg" class="img-showcased img-fluid milk"></div> 
-                <div class="image-frame"><img src="images/brenda-godinez-227275-unsplash.jpg" class="img-showcased img-fluid soup"></div>
+                <div class="img-frame pineapple"><img src="images/pineapple_cropped_small.jpg" class="image-showcased img-fluid">
+                    <div class="img-text pineapple-text">COOL</div>
+                </div>
+                <div class="img-frame milk"><img src="images/milk_small.jpg" class="img-showcased img-fluid">
+                    <div class="img-text milk-text">calm</div>
+                </div>
+                <div class="img-frame soup"><img src="images/soup_small.jpg" class="img-showcased img-fluid">
+                    <div class="img-text soup-text">Collected</div>
+                </div>
             </div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
