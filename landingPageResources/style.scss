@@ -109,7 +109,8 @@ body, html {
         width: auto;
         grid-template-columns: auto;
     }
-    // .card {
-    //     display: table;
-    // }
+
+    .card-5{ //change this to the last card created
+        margin-bottom: 2rem; //making sure that the last card won't clip the bottom of the page
+    }
 }
