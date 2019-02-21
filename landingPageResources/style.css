@@ -78,6 +78,11 @@ body, html {
           animation-delay: 0.8s;
 }
 
+.card-6 {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
 @-webkit-keyframes move-up {
   from {
     -webkit-transform: translateY(8rem);
