@@ -1,0 +1,44 @@
+html, body{
+    font-family: Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+li{
+    margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.1s;
+}
+
+li>a:hover{
+    font-size: 1.25rem;
+}
+
+#return{
+    position: fixed;
+    bottom: 10%;
+}
+
+@media only screen and (max-width: 768px){
+    h1{
+        text-align: center;
+    }
+
+    ul{
+        display: table; 
+        /* making centered ul possible */
+        margin: 0 auto;
+        list-style: none;
+    }
+
+    li{
+        margin: 2rem;
+    }
+
+    a:hover{
+        font-size: 1rem;
+    }
+}
