@@ -15,3 +15,5 @@ Repo for web programming stuff for my course
 * Using HTML and CSS
 #### Week 5
 * Make a portfolio page using Bootstrap
+#### Week 6
+* Use CSS selectors
