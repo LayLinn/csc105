@@ -385,6 +385,13 @@ main {
   body {
     font-size: 15px;
   }
+  .navbar {
+    -webkit-transition: all 0.1 ease-in;
+    transition: all 0.1 ease-in;
+  }
+  .navbar-dark {
+    margin-left: 0;
+  }
   .heading-normal {
     display: none;
   }

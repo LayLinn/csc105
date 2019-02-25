@@ -397,6 +397,14 @@ main {
     body {
         font-size: 15px;
     }
+    //nav
+    .navbar{
+        transition: all 0.1 ease-in;
+    }
+    .navbar-dark{
+        margin-left: 0;
+    }
+    //heading/text
     .heading-normal {
         //hide normal heading if viewport is small enough
         display: none;
