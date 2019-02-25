@@ -21,6 +21,7 @@ html {
   font-size: 16px;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -61,10 +62,22 @@ main {
 .navbar {
   position: fixed;
   width: 100%;
+  z-index: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .navbar-brand {
   font-size: 1.5rem;
+}
+
+.navbar a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar-dark {
+  margin-left: 3rem;
 }
 
 .box {
@@ -403,6 +416,12 @@ main {
     font-size: 6rem;
     width: 6rem;
     height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 569px) {
+  .welcome-text {
+    font-size: 3.5rem;
   }
 }
 

@@ -18,13 +18,13 @@
 
 //font-face
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
 // HTML, MAIN
 body,
 html {
     font-size: 16px;
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth; //make jumping between sections smoother
 }
 
 main {
@@ -63,15 +63,27 @@ main {
     opacity: 0; //making the text invisible initially
 }
 
-
 //Navigation
 .navbar {
     position: fixed;
     width: 100%;
+    z-index: 0;
+    transition: all 1s ease;
 }
 
 .navbar-brand {
     font-size: 1.5rem;
+}
+
+    //Animated Navigation
+.navbar a {
+    //selector all anchor link inside navbar
+    transition: all 0.5s;
+}
+
+.navbar-dark {
+    //push navbar more to the right when scrolled to the bottom
+    margin-left: 3rem;
 }
 
 //Boxes, Section containers
@@ -96,8 +108,7 @@ main {
 .box-3 {
     min-height: 60vh;
     max-height: auto;
-    background-color: 238, 241, 235;
-    // @extend %standard-padding;
+    background-color: 238, 241, 235; // @extend %standard-padding;
     padding: 3rem 5rem;
 }
 
@@ -295,7 +306,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr
 }
 
-.link-box{
+.link-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,12 +323,12 @@ main {
     margin: 0 auto;
 }
 
-.fa-github{
+.fa-github {
     color: black;
     background-color: white;
 }
 
-.fa:hover{
+.fa:hover {
     text-decoration: none;
 }
 
@@ -326,7 +337,6 @@ main {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -334,122 +344,100 @@ main {
 
 //Media query
 @media only screen and (max-width: 1024px) {
-
     //First section
     .box-1 {
         background-size: cover;
         color: white;
     }
-
     #welcome-text p {
         border: none;
         padding: 0;
-    }
-
-    //Second Section
+    } //Second Section
     .box-2 {
         height: auto;
         padding: 2rem 1.5rem;
     }
-
     #heading-second {
         text-align: center;
     }
-
     .second-info {
         margin: 1rem 1.5rem;
-    }
-
-    //Third Section
+    } //Third Section
     .box-3 {
         padding: 2rem 1rem;
     }
-
     .heading-third {
         padding-left: 1rem; //reset padding
     }
-
     .third-info {
         grid-template-columns: 1fr;
         margin: 1rem 1rem;
         padding: 0 1rem;
         grid-row-gap: 2rem;
     }
-
     .third-info p {
         padding-left: 0; //reset padding
     }
-
     .progress {
         width: 75%;
         padding-left: 0;
     }
-
     .image-frame-macbook {
         width: 50%;
         margin: 0 auto;
-    }
-
-    //Fourth Section
+    } //Fourth Section
     .box-4 {
         padding: 2rem 1rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-
     //body
     html,
     body {
         font-size: 15px;
     }
-
     .heading-normal {
         //hide normal heading if viewport is small enough
         display: none;
     }
-
     .heading-small {
         display: inline-block;
-    }
-
-    //third section
+    } //third section
     .third-info {
         grid-row-gap: 3rem;
     }
-
     .image-frame-macbook {
         width: 75%;
-    }
-
-    //fourth section
+    } //fourth section
     .heading-fourth {
         padding-left: 0;
     }
-
     .img-text {
         font-size: 4rem;
-    }
-
-    //footer
-    .link-table{
+    } //footer
+    .link-table {
         grid-template-columns: auto;
         grid-row-gap: 3rem;
         margin-bottom: 5rem; //push the contents up
     }
-    .heading-footer{
+    .heading-footer {
         font-size: 2.5rem;
     }
-
-    .fa{
+    .fa {
         font-size: 6rem;
         width: 6rem;
         height: 6rem;
     }
 }
 
-@media only screen and (min-width: 1919px) {
+@media only screen and (max-width: 569px) {
+    .welcome-text {
+        font-size: 3.5rem;
+    }
+}
 
+@media only screen and (min-width: 1919px) {
     html,
     body {
         font-size: 17px;
