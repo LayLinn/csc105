@@ -67,7 +67,7 @@ main {
 .navbar {
     position: fixed;
     width: 100%;
-    z-index: 0;
+    z-index: 1;
     transition: all 1s ease;
 }
 
@@ -450,4 +450,21 @@ main {
     body {
         font-size: 17px;
     }
+}
+
+//Parallax
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px; //Main part for parallax
+    perspective-origin: 0 0;
+}
+
+section{
+    transform-style: preserve-3d;
+}
+
+.parallax{
+    transform-origin: 0 0;
+    transform: translateZ(-1px) scale(2);
 }

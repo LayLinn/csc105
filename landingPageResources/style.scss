@@ -10,7 +10,8 @@
 }
 
 //margin reset/ out of flow
-body, html {
+body,
+html {
     font-size: 16px; //default size
     margin: 0;
     overflow-x: hidden;
@@ -32,6 +33,11 @@ body, html {
 //header
 .header {
     @extend %arizona-tea;
+}
+
+.journal-link {
+    text-decoration: none;
+    color: grey;
 }
 
 //main
@@ -77,12 +83,16 @@ body, html {
     animation-delay: 0.8s;
 }
 
-.card-6{
+.card-6 {
     animation-delay: 0.75s;
 }
 
-.card-7{
+.card-7 {
     animation-delay: 0.8s;
+}
+
+.card-8 {
+    animation-delay: 0.82s;
 }
 
 .card .btn {
@@ -93,6 +103,7 @@ body, html {
     from {
         transform: translateY(8rem);
     }
+
     to {
         transform: translateY(0rem);
     }
@@ -102,23 +113,32 @@ body, html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 //mobile responsive
+@media only screen and (max-width: 736px){
+    .card-8{
+        margin-bottom: 1rem;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     #main {
         margin: 2rem auto;
         width: auto;
     }
+
     .works {
         width: auto;
         grid-template-columns: auto;
     }
 
-    .card-5{ //change this to the last card created
+    .card-5 {
+        //change this to the last card created
         margin-bottom: 2rem; //making sure that the last card won't clip the bottom of the page
     }
 }

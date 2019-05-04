@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        html, body {
+            overflow: hidden;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        input[type="number"] {
+            /* height: 2rem; */
+            margin: 0.5rem;
+        }
+
+        /* .count {
+            width: 2.5rem;
+        }  */
+
+        @media only screen and (max-width: 736px){
+            form{
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form name="orderForm" action="form.php" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                Pizza
+                <div class="form-row">
+                    <div class="col-xs-5 col-md-3">
+                        <input type="number" name="pizza-count" class="form-control" placeholder="amount"></div>
+                    <div class="col-xs-7 col-md-9"> <input type="number" name="pizza-price" class="form-control" placeholder="price">
+                    </div>
+                </div>
+                Lasagna
+                <div class="form-row">
+                    <div class="col-xs-2 col-md-3">
+                        <input type="number" name="lasagna-count" class="form-control" placeholder="amount">
+                    </div>
+                    <div class="col-md-9"><input type="number" name="lasagna-price" class="form-control" placeholder="price">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Process Order" class="btn btn-primary">
+        </form>
+    </main>
+    <script src="form.js"></script>
+</body>
+
+</html>
