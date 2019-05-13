@@ -9,7 +9,8 @@
   border-color: #0b0f0c;
 }
 
-body, html {
+body,
+html {
   font-size: 16px;
   margin: 0;
   overflow-x: hidden;
@@ -27,6 +28,11 @@ body, html {
   opacity: 0.1;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+}
+
+.journal-link {
+  text-decoration: none;
+  color: grey;
 }
 
 #main {
@@ -88,6 +94,11 @@ body, html {
           animation-delay: 0.8s;
 }
 
+.card-8 {
+  -webkit-animation-delay: 0.82s;
+          animation-delay: 0.82s;
+}
+
 @-webkit-keyframes move-up {
   from {
     -webkit-transform: translateY(8rem);
@@ -125,6 +136,12 @@ body, html {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .card-8 {
+    margin-bottom: 1rem;
   }
 }
 

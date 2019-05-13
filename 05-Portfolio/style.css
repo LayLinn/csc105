@@ -62,7 +62,7 @@ main {
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -437,5 +437,26 @@ main {
   body {
     font-size: 17px;
   }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-perspective-origin: 0 0;
+          perspective-origin: 0 0;
+}
+
+section {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.parallax {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
 }
 /*# sourceMappingURL=style.css.map */
